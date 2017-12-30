@@ -13,7 +13,7 @@ Instructions
 
 1. Obtain a Slack "Team Export" dump of all the data for a team
 2. Build the Docker image via the provided script `build.sh`
-3. Customize the connect.sh script accordingly.  Ensure that you edit the volume paths accordingly. `docker run -it -v /home/tim/Downloads/SLACK:/slackexport:Z -v /home/tim/docker-rlang/export:/export:Z docker-slackwordcloud` The first volume declaration is for the Slack Export from Step 1.  The second is the export directory where the wordcloud will be written.  The container will build the wordcloud, providing both an original wordcloud and a version with a transparent background
+3. Customize the connect.sh script accordingly.  Ensure that you edit the volume paths accordingly. `docker run -it -v /home/tim/Downloads/SLACK:/slackexport:Z -v "$PWD"/export:/export:Z docker-slackwordcloud` The first volume declaration is for the Slack Export from Step 1.  The second is the export directory where the wordcloud will be written.  The container will build the wordcloud, providing both an original wordcloud and a version with a transparent background
 4. Run the container/script via `connect.sh`
 5. View your beautiful word cloud!
 
